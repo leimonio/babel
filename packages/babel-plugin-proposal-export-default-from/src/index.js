@@ -12,6 +12,7 @@ export default declare(api => {
       ExportNamedDeclaration(path) {
         const { node, scope } = path;
         const { specifiers } = node;
+        debugger;
         if (!t.isExportDefaultSpecifier(specifiers[0])) return;
 
         const specifier = specifiers.shift();
